@@ -164,6 +164,7 @@ h2 {
     }
     .position {
         margin: 1vh 0.5vw;
+        width: 100%;
     }
     .preset-number {
         padding-left: 0.5vw;

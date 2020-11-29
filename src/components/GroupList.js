@@ -3,7 +3,7 @@ import Group from './Group'
 
 
 const GroupList = ({groups, sendPosition}) => {
-    const [selectedPreset, setSelectedPreset] = useState(65);
+    const [selectedPreset, setSelectedPreset] = useState(undefined);
     const selectPresetHandler = (preset) => {
         sendPosition(preset)
             .then(response => {
