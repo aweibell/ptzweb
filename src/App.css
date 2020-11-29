@@ -1,0 +1,184 @@
+body {
+    background: #112222;
+}
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    max-height: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+h1 {
+    font-size: 3vw;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #bbbbbb;
+    padding: 0.2rem;
+    margin: 0;
+    text-align: left;
+}
+
+.groupscontainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: #113333;
+    color: darkturquoise;
+}
+
+.group {
+    border-top: solid 5px #335555;
+    border-left: solid 5px #335555;
+    border-bottom: solid 5px #112222;
+    border-right: solid 5px #112222;
+    border-radius: 5px;
+    background: #112222;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.group h1 {
+    position: relative;
+    margin: 0;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    color: #447777;
+}
+
+.positions-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.position {
+    border: solid 2px #020404;
+    background: #081616;
+    width: auto;
+    height: auto;
+    margin: 1vh 1vw;
+    padding: 4px 8px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition-duration: 1s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.position:hover {
+    border: solid 2px #448888;
+    background: #203030;
+    transition-duration: 0.1s;
+}
+
+.position:active {
+    border: solid 2px #88ffff;
+    background: #163232;
+    transition-duration: 0.1s;
+}
+
+.pressed, .pressed:hover {
+    border: solid 2px #88ffff;
+    background: #163232;
+}
+
+.position.selected {
+    border: solid 2px #44aaaa;
+    background: #112222;
+    transition-duration: 0.5s;
+}
+.position.selected:hover {
+    background: #163232;
+}
+
+.position.selected h2 {
+    color: lightgrey;
+}
+
+.preset-number {
+    color: dimgrey;
+    display: flex;
+    padding-left: 1vw;
+}
+.preset-number span {
+    align-self: center;
+}
+
+.attribution {
+    font-size: 12px;
+    color: dimgrey;
+}
+
+.attribution a {
+    color: grey;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 1024px) {
+    .groupscontainer {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .group {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .position {
+        margin: 1vh 0.5vw;
+    }
+    .preset-number {
+        padding-left: 0.5vw;
+    }
+
+}
+
+@media (max-width: 361px) {
+    .group {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .group h1 {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+        margin: 0;
+    }
+}
